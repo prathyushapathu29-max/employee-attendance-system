@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Employee Management</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<div class="employee-page">
+
+    <div class="page-header">
+
+        <div>
+            <h1>Employee Management</h1>
+            <p>Manage Employee Details</p>
+        </div>
+
+        <button class="add-button" onclick="showEmployeeForm()">
+            + Add Employee
+        </button>
+
+    </div>
+
+
+    <div class="employee-form" id="employeeForm">
+
+        <h2 id="formTitle">Add Employee</h2>
+
+        <input type="text" id="employeeId" placeholder="Employee ID">
+
+        <input type="text" id="employeeName" placeholder="Employee Name">
+
+        <input type="text" id="department" placeholder="Department">
+
+        <input type="email" id="email" placeholder="Email">
+
+        <input type="text" id="phone" placeholder="Phone Number">
+
+        <button onclick="saveEmployee()">
+            Save Employee
+        </button>
+
+        <button class="cancel-button" onclick="hideEmployeeForm()">
+            Cancel
+        </button>
+
+    </div>
+
+
+    <div class="employee-table-container">
+
+        <h2>Employee List</h2>
+
+        <table>
+
+            <thead>
+
+                <tr>
+                    <th>Employee ID</th>
+                    <th>Name</th>
+                    <th>Department</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Action</th>
+                </tr>
+
+            </thead>
+
+            <tbody id="employeeTableBody"></tbody>
+
+        </table>
+
+    </div>
+
+
+    <button class="back-button"
+            onclick="window.location.href='dashboard.html'">
+
+        ← Back to Dashboard
+
+    </button>
+
+</div>
+
+
+<script src="js/employee.js"></script>
+
+</body>
+
+</html>

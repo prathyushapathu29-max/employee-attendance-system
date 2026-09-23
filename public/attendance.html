@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Attendance Management</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="employee-page">
+
+        <div class="page-header">
+            <div>
+                <h1>Attendance Management</h1>
+                <p>Manage Daily Employee Attendance</p>
+            </div>
+        </div>
+
+        <div class="attendance-form">
+
+            <label>Select Date</label>
+
+            <input type="date" id="attendanceDate">
+
+            <button onclick="loadAttendance()">
+                Load Employees
+            </button>
+
+        </div>
+
+        <div class="employee-table-container">
+
+            <h2>Mark Attendance</h2>
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>Employee ID</th>
+                        <th>Employee Name</th>
+                        <th>Department</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+
+                <tbody id="attendanceTableBody">
+
+                </tbody>
+
+            </table>
+
+            <button class="save-attendance" onclick="saveAttendance()">
+                Save Attendance
+            </button>
+
+        </div>
+
+        <button class="back-button" onclick="window.location.href='dashboard.html'">
+            ← Back to Dashboard
+        </button>
+
+    </div>
+
+    <script src="js/attendance.js"></script>
+
+</body>
+</html>

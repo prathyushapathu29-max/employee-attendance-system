@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Dashboard - Employee Attendance Management System</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body class="dashboard-body">
+
+    <div class="dashboard-layout">
+
+
+        <!-- SIDEBAR -->
+
+        <aside class="sidebar">
+
+            <div class="sidebar-logo">
+
+                <div class="logo-icon">
+                    EA
+                </div>
+
+                <div>
+
+                    <h2>Employee</h2>
+
+                    <p>Attendance System</p>
+
+                </div>
+
+            </div>
+
+
+            <nav class="sidebar-menu">
+
+                <a
+                    href="dashboard.html"
+                    class="menu-item active"
+                >
+
+                    <span>⌂</span>
+
+                    Dashboard
+
+                </a>
+
+
+                <a
+                    href="employees.html"
+                    class="menu-item"
+                >
+
+                    <span>👥</span>
+
+                    Employees
+
+                </a>
+
+
+                <a
+                    href="attendance.html"
+                    class="menu-item"
+                >
+
+                    <span>📋</span>
+
+                    Attendance
+
+                </a>
+
+
+                <a
+                    href="reports.html"
+                    class="menu-item"
+                >
+
+                    <span>📊</span>
+
+                    Reports
+
+                </a>
+
+            </nav>
+
+
+            <div class="sidebar-bottom">
+
+                <button
+                    class="sidebar-logout"
+                    onclick="window.location.href='index.html'"
+                >
+
+                    <span>↪</span>
+
+                    Logout
+
+                </button>
+
+            </div>
+
+        </aside>
+
+
+
+        <!-- MAIN CONTENT -->
+
+        <main class="dashboard-main">
+
+
+            <!-- TOP HEADER -->
+
+            <header class="dashboard-header">
+
+                <div>
+
+                    <p class="dashboard-small-title">
+                        EMPLOYEE ATTENDANCE
+                    </p>
+
+                    <h1>Dashboard</h1>
+
+                </div>
+
+
+                <div class="admin-section">
+
+                    <div class="admin-icon">
+                        A
+                    </div>
+
+                    <div>
+
+                        <strong>Admin</strong>
+
+                        <p>Administrator</p>
+
+                    </div>
+
+                </div>
+
+            </header>
+
+
+
+            <!-- WELCOME -->
+
+            <section class="welcome-section">
+
+                <div>
+
+                    <h2>
+                        Good Day, Admin 👋
+                    </h2>
+
+                    <p>
+                        Here's today's employee attendance overview.
+                    </p>
+
+                </div>
+
+
+                <div class="date-box">
+
+                    <span>📅</span>
+
+                    <div>
+
+                        <small>
+                            Today's Date
+                        </small>
+
+                        <strong id="todayDate">
+                            Loading...
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- SUMMARY CARDS -->
+
+            <section class="summary-cards">
+
+
+                <div class="dashboard-card">
+
+                    <div class="card-icon employee-icon">
+                        👥
+                    </div>
+
+                    <div>
+
+                        <p>
+                            Total Employees
+                        </p>
+
+                        <h3 id="totalEmployees">
+                            0
+                        </h3>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="dashboard-card">
+
+                    <div class="card-icon present-icon">
+                        ✓
+                    </div>
+
+                    <div>
+
+                        <p>
+                            Present Today
+                        </p>
+
+                        <h3 id="presentEmployees">
+                            0
+                        </h3>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="dashboard-card">
+
+                    <div class="card-icon absent-icon">
+                        !
+                    </div>
+
+                    <div>
+
+                        <p>
+                            Absent Today
+                        </p>
+
+                        <h3 id="absentEmployees">
+                            0
+                        </h3>
+
+                    </div>
+
+                </div>
+
+
+            </section>
+
+
+
+            <!-- PRESENT EMPLOYEES -->
+
+            <section class="present-section">
+
+                <div class="section-heading">
+
+                    <div>
+
+                        <h2>
+                            Present Employees
+                        </h2>
+
+                        <p>
+                            Employees marked present today
+                        </p>
+
+                    </div>
+
+
+                    <span class="present-badge">
+                        ● Today
+                    </span>
+
+                </div>
+
+
+                <div class="present-table-container">
+
+                    <table>
+
+                        <thead>
+
+                            <tr>
+
+                                <th>
+                                    Employee ID
+                                </th>
+
+                                <th>
+                                    Employee Name
+                                </th>
+
+                                <th>
+                                    Department
+                                </th>
+
+                                <th>
+                                    Status
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody id="presentEmployeeTable">
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- QUICK ACCESS -->
+
+            <section class="quick-section">
+
+                <h2>
+                    Quick Access
+                </h2>
+
+
+                <div class="quick-cards">
+
+
+                    <div
+                        class="quick-card"
+                        onclick="window.location.href='employees.html'"
+                    >
+
+                        <div class="quick-icon">
+                            👥
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Employee Management
+                            </h3>
+
+                            <p>
+                                Manage employee details
+                            </p>
+
+                        </div>
+
+                        <span>
+                            →
+                        </span>
+
+                    </div>
+
+
+
+                    <div
+                        class="quick-card"
+                        onclick="window.location.href='attendance.html'"
+                    >
+
+                        <div class="quick-icon">
+                            📋
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Mark Attendance
+                            </h3>
+
+                            <p>
+                                Record daily attendance
+                            </p>
+
+                        </div>
+
+                        <span>
+                            →
+                        </span>
+
+                    </div>
+
+
+
+                    <div
+                        class="quick-card"
+                        onclick="window.location.href='reports.html'"
+                    >
+
+                        <div class="quick-icon">
+                            📊
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                View Reports
+                            </h3>
+
+                            <p>
+                                Check attendance reports
+                            </p>
+
+                        </div>
+
+                        <span>
+                            →
+                        </span>
+
+                    </div>
+
+
+                </div>
+
+            </section>
+
+
+        </main>
+
+    </div>
+
+
+    <!-- DASHBOARD JAVASCRIPT -->
+
+    <script src="js/dashboard.js?v=2"></script>
+
+
+</body>
+
+</html>
